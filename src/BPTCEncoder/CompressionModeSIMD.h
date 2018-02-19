@@ -41,11 +41,12 @@
 #ifndef BPTCENCODER_SRC_BC7COMPRESSIONMODESIMD_H_
 #define BPTCENCODER_SRC_BC7COMPRESSIONMODESIMD_H_
 
-#include "TexCompTypes.h"
+#include "FasTC/TexCompTypes.h"
 #include "RGBAEndpointsSIMD.h"
 
-// Forward Declarations
-class BitStream;
+namespace FasTC {
+  class BitStream;
+}  // namespace FasTC
 
 static const int kPBits[4][2] = {
   { 0, 0 },
@@ -75,7 +76,7 @@ class BC7CompressionModeSIMD {
   static int NumUses[8];
   static void ResetNumUses() { memset(NumUses, 0, sizeof(NumUses)); }
 
-  double Compress(BitStream &stream, const int shapeIdx,
+  double Compress(FasTC::BitStream &stream, const int shapeIdx,
                   const RGBAClusterSIMD *clusters) const;
 
   // This switch controls the quality of the simulated annealing optimizer. We

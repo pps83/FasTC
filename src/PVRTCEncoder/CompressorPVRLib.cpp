@@ -18,6 +18,7 @@
 // Our library include...
 #include "FasTC/PVRTCCompressor.h"
 
+#ifdef PVRTEXLIB_FOUND
 // PVRLib library include...
 #include "PVRTextureUtilities.h"
 
@@ -48,3 +49,5 @@ namespace PVRTCC {
   }
 
 }  // namespace PVRTCC
+
+#endif

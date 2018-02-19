@@ -16,7 +16,7 @@
 // <http://gamma.cs.unc.edu/FasTC/>
 
 #include "gtest/gtest.h"
-#include "PVRTCImage.h"
+#include "PVRTCEncoder/PVRTCImage.h"
 #include "FasTC/Pixel.h"
 #include "TestUtils.h"
 

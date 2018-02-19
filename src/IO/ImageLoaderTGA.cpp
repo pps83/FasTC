@@ -24,7 +24,7 @@
 
 #include "FasTC/TexCompTypes.h"
 
-#include "targa.h"
+#include "../third_party/tga/targa.h"
 
 ImageLoaderTGA::ImageLoaderTGA(const uint8 *rawData, const int32 rawDataSz)
   : ImageLoader(rawData, rawDataSz)

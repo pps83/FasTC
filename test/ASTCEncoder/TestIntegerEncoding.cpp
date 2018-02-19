@@ -16,7 +16,7 @@
 // <http://gamma.cs.unc.edu/FasTC/>
 
 #include "gtest/gtest.h"
-#include "IntegerEncoding.h"
+#include "ASTCEncoder/IntegerEncoding.h"
 using ASTCC::IntegerEncodedValue;
 
 TEST(IntegerEncoding, GetEncoding) {

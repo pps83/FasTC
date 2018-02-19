@@ -31,7 +31,7 @@
 using FasTC::Pixel;
 
 #ifdef DEBUG_PVRTC_DECODER
-#  include "../../IO/include/ImageFile.h"
+#  include "FasTC/ImageFile.h"
 #endif
 
 #include "Indexer.h"

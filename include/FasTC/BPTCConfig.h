@@ -18,6 +18,9 @@
 // BPTCConfig.h.in  -- This file contains variables that are introduced
 // explicitly by the CMake build process.
 
+#include "FasTC/BaseConfig.h"
+
+#if 0
 // Do we have the proper popcnt instruction defined?
 #cmakedefine NO_INLINE_ASSEMBLY
 #cmakedefine HAS_SSE_POPCNT
@@ -28,3 +31,4 @@
 #cmakedefine HAS_MSVC_ATOMICS
 
 #cmakedefine FOUND_NVTT_BPTC_EXPORT
+#endif

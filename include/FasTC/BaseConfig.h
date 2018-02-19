@@ -15,5 +15,29 @@
 // Please send all BUG REPORTS to <pavel@cs.unc.edu>.
 // <http://gamma.cs.unc.edu/FasTC/>
 
+#ifndef BASECONFIG_H_
+#define BASECONFIG_H_
+
 // Does our compiler support cpp11 types?
-#cmakedefine FASTC_BASE_HAS_CPP11_TYPES
+#define FASTC_BASE_HAS_CPP11_TYPES
+
+// ImageLoader.h/ImageWriter.h
+#define PNG_FOUND
+#define OPENGL_FOUND
+
+// BPTCConfig.h
+// Do we have the proper popcnt instruction defined?
+#define NO_INLINE_ASSEMBLY
+#define HAS_SSE_POPCNT
+//#define HAS_SSE_41
+
+#define HAS_ATOMICS
+//#define HAS_GCC_ATOMICS
+#define HAS_MSVC_ATOMICS
+// #define FOUND_NVTT_BPTC_EXPORT
+
+// PVRTCDefines.h
+//#define PVRTEXLIB_FOUND
+//#define DEBUG_PVRTC_DECODER
+
+#endif /* BASECONFIG_H_ */

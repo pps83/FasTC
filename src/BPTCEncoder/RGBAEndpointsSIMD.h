@@ -40,12 +40,12 @@
 #ifndef __RGBA_SIMD_ENDPOINTS_H__
 #define __RGBA_SIMD_ENDPOINTS_H__
 
-#include "TexCompTypes.h"
+#include "FasTC/TexCompTypes.h"
 
 #include <cmath>
 #include <cfloat>
 #include <cstring>
-
+#include <intrin.h>
 #include <smmintrin.h>
 
 static const int kNumColorChannels = 4;

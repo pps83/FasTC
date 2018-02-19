@@ -24,6 +24,8 @@
 
 #include "FasTC/TexCompTypes.h"
 
+#ifdef PVRTEXLIB_FOUND
+
 #include "PVRTextureUtilities.h"
 
 static void ReportError(const char *msg) {
@@ -56,3 +58,4 @@ bool ImageLoaderPVR::ReadData() {
   return LoadFromPixelBuffer(reinterpret_cast<uint32 *>(pvrTex.getDataPtr()));
 }
 
+#endif

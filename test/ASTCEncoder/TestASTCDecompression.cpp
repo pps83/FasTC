@@ -36,9 +36,9 @@ class ImageTester {
  public:
   explicit ImageTester(const char *suffix) {
     std::string astcFilename =
-      GenerateTestFilename("mandrill_", std::string(suffix), "astc");
+      GenerateTestFilename("data/mandrill_", std::string(suffix), "astc");
     std::string pngFilename =
-      GenerateTestFilename("mandrill_decompressed_", std::string(suffix), "png");
+      GenerateTestFilename("data/mandrill_decompressed_", std::string(suffix), "png");
 
     ImageFile astc (astcFilename.c_str());
     bool success = astc.Load();

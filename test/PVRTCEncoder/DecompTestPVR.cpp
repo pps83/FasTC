@@ -17,11 +17,12 @@
 
 #include "gtest/gtest.h"
 
-// This is the PVR library header
-#include "PVRTextureUtilities.h"
-
 // This is our library header
 #include "FasTC/PVRTCCompressor.h"
+
+#ifdef PVRTEXLIB_FOUND
+// This is the PVR library header
+#include "PVRTextureUtilities.h"
 
 #include "TestUtils.h"
 
@@ -119,3 +120,4 @@ TEST(Decompressor, DecompressTransparent4BPP) {
 TEST(Decompressor, DecompressTransGradient4BPP) {
   ImageTester("4bpp-trans-gradient.pvr", false);
 }
+#endif

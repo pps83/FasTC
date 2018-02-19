@@ -17,6 +17,8 @@
 
 #include "FasTC/BPTCCompressor.h"
 
+#ifdef FOUND_NVTT_BPTC_EXPORT
+
 #include "CompressionMode.h"
 #undef DBL_MAX
 #include "FasTC/BitStream.h"
@@ -170,3 +172,5 @@ namespace BPTCC {
   }
 
 }  // namespace BC7C
+
+#endif

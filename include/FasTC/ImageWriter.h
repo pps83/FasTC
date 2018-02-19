@@ -61,16 +61,4 @@ class ImageWriter {
   virtual bool WriteImage() = 0;
 };
 
-#ifndef PNG_FOUND
-#cmakedefine PNG_FOUND
-#endif // PNG_FOUND
-
-#ifndef PVRTEXLIB_FOUND
-#cmakedefine PVRTEXLIB_FOUND
-#endif // PVRTEXLIB_FOUND
-
-#ifndef OPENGL_FOUND
-#cmakedefine OPENGL_FOUND
-#endif // OPENGL_FOUND
-
 #endif // _IMAGE_LOADER_H_

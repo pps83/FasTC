@@ -37,12 +37,12 @@
 //
 //--------------------------------------------------------------------------------------
 
-#include "TexCompTypes.h"
-#include "BC7Compressor.h"
-#include "BC7CompressionModeSIMD.h"
+#include "FasTC/TexCompTypes.h"
+#include "FasTC/BPTCCompressor.h"
+#include "CompressionModeSIMD.h"
 #include "RGBAEndpointsSIMD.h"
 #include "BCLookupTables.h"
-#include "BitStream.h"
+#include "FasTC/BitStream.h"
 
 #ifdef _MSC_VER
 #define ALIGN_SSE __declspec( align(16) )
@@ -760,7 +760,7 @@ double BC7CompressionModeSIMD::CompressCluster(const RGBAClusterSIMD &cluster, R
   return OptimizeEndpointsForCluster(cluster, p1, p2, bestIndices, bestPbitCombo);
 }
 
-double BC7CompressionModeSIMD::Compress(BitStream &stream, const int shapeIdx, const RGBAClusterSIMD *clusters) const { 
+double BC7CompressionModeSIMD::Compress(FasTC::BitStream &stream, const int shapeIdx, const RGBAClusterSIMD *clusters) const { 
 
   const int kModeNumber = GetModeNumber();
   const int nPartitionBits = GetNumberOfPartitionBits();
@@ -941,7 +941,7 @@ namespace BC7C
   }
 
   // Write out a transparent block.
-  static void WriteTransparentBlock(BitStream &stream) {
+  static void WriteTransparentBlock(FasTC::BitStream &stream) {
     // Use mode 6
     stream.WriteBits(1 << 6, 7);
     stream.WriteBits(0, 128-7);
@@ -949,7 +949,7 @@ namespace BC7C
   }
 
   // Compresses a single color optimally and outputs the result.
-  static void CompressOptimalColorBC7(uint32 pixel, BitStream &stream) {
+  static void CompressOptimalColorBC7(uint32 pixel, FasTC::BitStream &stream) {
 
     stream.WriteBits(1 << 5, 6); // Mode 5
     stream.WriteBits(0, 2); // No rotation bits.

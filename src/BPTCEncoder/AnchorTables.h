@@ -15,6 +15,9 @@
 // Please send all BUG REPORTS to <pavel@cs.unc.edu>.
 // <http://gamma.cs.unc.edu/FasTC/>
 
+#ifndef ANCHORTABLES_H_
+#define ANCHORTABLES_H_
+
 #include "FasTC/Shapes.h"
 
 #include <cassert>
@@ -83,3 +86,5 @@ static uint32 GetAnchorIndexForSubset(
 }
 
 }  // namespace BPTCC
+
+#endif /* ANCHORTABLES_H_ */

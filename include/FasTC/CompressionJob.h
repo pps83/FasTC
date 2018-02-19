@@ -26,7 +26,6 @@
 #else
 #   define ALIGN(x) __attribute__((aligned(x)))
 #endif
-#define ALIGN_SSE ALIGN(16)
 
 namespace FasTC {
 

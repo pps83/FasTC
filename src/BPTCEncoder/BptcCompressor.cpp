@@ -43,9 +43,6 @@
 #include "FasTC/TexCompTypes.h"
 #include "FasTC/BitStream.h"
 
-using FasTC::BitStream;
-using FasTC::BitStreamReadOnly;
-
 #include "FasTC/Shapes.h"
 
 #include "AnchorTables.h"
@@ -73,6 +70,15 @@ using FasTC::BitStreamReadOnly;
 #include <sstream>
 #include <string>
 #include <limits>
+
+#ifdef _MSC_VER
+#define ALIGN_SSE __declspec( align(16) )
+#else
+#define ALIGN_SSE __attribute__((aligned(16)))
+#endif
+
+using FasTC::BitStream;
+using FasTC::BitStreamReadOnly;
 
 enum EBlockStats {
   eBlockStat_Path,

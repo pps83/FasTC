@@ -37,16 +37,20 @@
 //
 //--------------------------------------------------------------------------------------
 
-#include "BC7Config.h"
 #include "RGBAEndpointsSIMD.h"
-#include "BC7Compressor.h"
-#include "BC7CompressionModeSIMD.h"
+#include "CompressionModeSIMD.h"
+#include "FasTC/BPTCCompressor.h"
 
 #include <cassert>
 #include <cfloat>
 
-#ifndef HAS_SSE_POPCNT 
 static inline uint32 popcnt32(uint32 x) {
+#if defined(HAS_SSE_POPCNT)
+  return _mm_popcnt_u32(x);
+#elif defined(_MSC_VER)
+#error 2334
+  return __popcnt(x);
+#else
   uint32 m1 = 0x55555555;
   uint32 m2 = 0x33333333;
   uint32 m3 = 0x0f0f0f0f;
@@ -55,8 +59,8 @@ static inline uint32 popcnt32(uint32 x) {
   x = (x+(x>>4))&m3;
   x += x>>8;
   return (x+(x>>16)) & 0x3f;
-}
 #endif
+}
 
 ///////////////////////////////////////////////////////////////////////////////
 //
@@ -140,11 +144,7 @@ static inline __m128i sad(const __m128i &a, const __m128i &b) {
 __m128i RGBAVectorSIMD::ToPixel(const __m128i &qmask) const {
 
   // !SPEED! We should figure out a way to get rid of these scalar operations.
-#ifdef HAS_SSE_POPCNT
-  const uint32 prec = _mm_popcnt_u32(((uint32 *)(&qmask))[0]);
-#else
   const uint32 prec = popcnt32(((uint32 *)(&qmask))[0]);
-#endif
   
   assert(r >= 0.0f && r <= 255.0f);
   assert(g >= 0.0f && g <= 255.0f);
@@ -181,11 +181,7 @@ __m128i RGBAVectorSIMD::ToPixel(const __m128i &qmask) const {
 __m128i RGBAVectorSIMD::ToPixel(const __m128i &qmask, const int pBit) const {
   
   // !SPEED! We should figure out a way to get rid of these scalar operations.
-#ifdef HAS_SSE_POPCNT
-  const uint32 prec = _mm_popcnt_u32(((uint32 *)(&qmask))[0]);
-#else
   const uint32 prec = popcnt32(((uint32 *)(&qmask))[0]);
-#endif
   
   assert(r >= 0.0f && r <= 255.0f);
   assert(g >= 0.0f && g <= 255.0f);
@@ -304,12 +300,7 @@ float RGBAClusterSIMD::QuantizedError(const RGBAVectorSIMD &p1, const RGBAVector
 
   // nBuckets should be a power of two.
   assert(!(nBuckets & (nBuckets - 1)));
-
-#ifdef HAS_SSE_POPCNT
-  const uint8 indexPrec = 8-_mm_popcnt_u32(~(nBuckets - 1) & 0xFF);
-#else
   const uint8 indexPrec = 8-popcnt32(~(nBuckets - 1) & 0xFF);
-#endif
   assert(indexPrec >= 2 && indexPrec <= 4);
 
   typedef __m128i tInterpPair[2];
@@ -326,7 +317,7 @@ float RGBAClusterSIMD::QuantizedError(const RGBAVectorSIMD &p1, const RGBAVector
     qp2 = p2.ToPixel(bitMask);
   }
 
-  __m128 errorMetricVec = _mm_load_ps( BC7C::GetErrorMetric() );
+  __m128 errorMetricVec = _mm_load_ps( BPTCC::GetErrorMetric(BPTCC::eErrorMetric_Uniform) );
 
   __m128 totalError = kZero;
   for(int i = 0; i < m_NumPoints; i++) {

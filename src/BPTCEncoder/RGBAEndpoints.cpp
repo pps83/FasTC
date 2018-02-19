@@ -71,7 +71,9 @@ static T max(const T &a, const T &b) {
 ///////////////////////////////////////////////////////////////////////////////
 static inline uint32 CountBitsInMask(uint8 n) {
 
-#if defined(_WIN64) || defined(__x86_64__) || defined(NO_INLINE_ASSEMBLY)
+#if defined(_MSC_VER)
+  return __popcnt16(n);
+#elif defined(_WIN64) || defined(__x86_64__) || defined(NO_INLINE_ASSEMBLY)
   if(!n) return 0; // no bits set
   if(!(n & (n-1))) return 1; // power of two
 

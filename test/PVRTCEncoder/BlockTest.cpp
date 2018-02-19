@@ -16,7 +16,7 @@
 // <http://gamma.cs.unc.edu/FasTC/>
 
 #include "gtest/gtest.h"
-#include "Block.h"
+#include "PVRTCEncoder/Block.h"
 
 TEST(Block, ConstructorFromBytes) {
   const uint8 data[8] = { 0 };
