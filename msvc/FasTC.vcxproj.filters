@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\ASTCEncoder">
+      <UniqueIdentifier>{0a7a9436-52ee-4be4-a38d-071e28a883be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ASTCEncoder">
+      <UniqueIdentifier>{3bf278c5-b8c1-42b8-9faa-77f24b967bb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Base">
+      <UniqueIdentifier>{acfac6ae-8b33-42b6-b3b2-063f013f1c7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\BPTCEncoder">
+      <UniqueIdentifier>{e268dc07-aa04-45a6-ba49-1d172757fd2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\BPTCEncoder">
+      <UniqueIdentifier>{4f306982-490e-4d9e-a631-0e17598cbc47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core">
+      <UniqueIdentifier>{15f68154-9650-48c9-b14e-52d534e5a03e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core">
+      <UniqueIdentifier>{047780f0-2831-4dea-8ee6-d00df0b1a540}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DXTEncoder">
+      <UniqueIdentifier>{7370f44d-3852-4ad4-aacd-a7978984eae8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DXTEncoder">
+      <UniqueIdentifier>{c09a9e08-704b-4f02-b5ee-24b867ffe9b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ETCEncoder">
+      <UniqueIdentifier>{fcd45a19-9d88-4450-b0de-e170c20a7ead}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\IO">
+      <UniqueIdentifier>{bee272b5-de37-4958-87c3-454ea1f77c1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\IO">
+      <UniqueIdentifier>{920aa9cc-3c1f-4f60-9c5e-21d429655a84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PVRTCEncoder">
+      <UniqueIdentifier>{84e36d9f-6934-46d7-b47a-2bb4fd467d0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PVRTCEncoder">
+      <UniqueIdentifier>{dc153fad-6489-435e-b35f-cab19125ac2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\FasTC">
+      <UniqueIdentifier>{c6f3ce68-6538-49cd-89f6-e068e7107231}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ETCEncoder">
+      <UniqueIdentifier>{aefe7137-bbcb-404b-9891-8f82044c1f04}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\ASTCEncoder\IntegerEncoding.h">
+      <Filter>Header Files\ASTCEncoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ASTCEncoder\Utils.h">
+      <Filter>Header Files\ASTCEncoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\BPTCEncoder\ParallelStage.h">
+      <Filter>Header Files\BPTCEncoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\BPTCEncoder\RGBAEndpoints.h">
+      <Filter>Header Files\BPTCEncoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\BPTCEncoder\RGBAEndpointsSIMD.h">
+      <Filter>Header Files\BPTCEncoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\BPTCEncoder\AnchorTables.h">
+      <Filter>Header Files\BPTCEncoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\BPTCEncoder\BCLookupTables.h">
+      <Filter>Header Files\BPTCEncoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\BPTCEncoder\CompressionMode.h">
+      <Filter>Header Files\BPTCEncoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\BPTCEncoder\CompressionModeSIMD.h">
+      <Filter>Header Files\BPTCEncoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Core\Thread.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Core\ThreadGroup.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Core\WorkerQueue.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Core\CompressionFuncs.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DXTEncoder\stb_dxt.h">
+      <Filter>Header Files\DXTEncoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\IO\ImageLoaderKTX.h">
+      <Filter>Header Files\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\IO\ImageLoaderPNG.h">
+      <Filter>Header Files\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\IO\ImageLoaderPVR.h">
+      <Filter>Header Files\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\IO\ImageLoaderTGA.h">
+      <Filter>Header Files\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\IO\ImageWriterKTX.h">
+      <Filter>Header Files\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\IO\ImageWriterPNG.h">
+      <Filter>Header Files\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\IO\GLDefines.h">
+      <Filter>Header Files\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\IO\ImageLoaderASTC.h">
+      <Filter>Header Files\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\PVRTCEncoder\Indexer.h">
+      <Filter>Header Files\PVRTCEncoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\PVRTCEncoder\PVRTCImage.h">
+      <Filter>Header Files\PVRTCEncoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\PVRTCEncoder\Block.h">
+      <Filter>Header Files\PVRTCEncoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\third_party\tga\targa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\ImageWriter.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\IPixel.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\Matrix2x2.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\Matrix3x3.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\Matrix4x4.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\MatrixBase.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\MatrixSquare.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\Pixel.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\PVRTCCompressor.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\PVRTCDefines.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\ReferenceCounter.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\ScopedAllocator.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\Shapes.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\StopWatch.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\TexComp.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\TexCompTypes.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\ThreadSafeStreambuf.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\Vector2.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\Vector3.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\Vector4.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\VectorBase.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\ASTCCompressor.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\BaseConfig.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\Bits.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\BitStream.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\BPTCCompressor.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\BPTCConfig.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\Color.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\CompressedImage.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\CompressionFormat.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\CompressionJob.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\DXTCompressor.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\ETCCompressor.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\FileStream.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\Image.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\ImageFile.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\ImageFileFormat.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\ImageFwd.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\FasTC\ImageLoader.h">
+      <Filter>Header Files\FasTC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ETCEncoder\rg_etc1.h">
+      <Filter>Header Files\ETCEncoder</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\ASTCEncoder\IntegerEncoding.cpp">
+      <Filter>Source Files\ASTCEncoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Base\IPixel.cpp">
+      <Filter>Source Files\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Base\Pixel.cpp">
+      <Filter>Source Files\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Base\Color.cpp">
+      <Filter>Source Files\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Base\CompressionJob.cpp">
+      <Filter>Source Files\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Base\Image.cpp">
+      <Filter>Source Files\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\BPTCEncoder\CompressNVTT.cpp">
+      <Filter>Source Files\BPTCEncoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\BPTCEncoder\ParallelStage.cpp">
+      <Filter>Source Files\BPTCEncoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\BPTCEncoder\RGBAEndpoints.cpp">
+      <Filter>Source Files\BPTCEncoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Core\WorkerQueue.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Core\CompressedImage.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Core\StopWatchWin32.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Core\TexComp.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Core\Thread.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Core\ThreadGroup.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Core\ThreadSafeStreambuf.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Core\ThreadWin32.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ETCEncoder\rg_etc1.cpp">
+      <Filter>Source Files\ETCEncoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\IO\ImageWriter.cpp">
+      <Filter>Source Files\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\IO\ImageWriterKTX.cpp">
+      <Filter>Source Files\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\IO\ImageWriterPNG.cpp">
+      <Filter>Source Files\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\IO\FileStreamWin32.cpp">
+      <Filter>Source Files\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\IO\ImageFile.cpp">
+      <Filter>Source Files\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\IO\ImageLoader.cpp">
+      <Filter>Source Files\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\IO\ImageLoaderASTC.cpp">
+      <Filter>Source Files\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\IO\ImageLoaderKTX.cpp">
+      <Filter>Source Files\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\IO\ImageLoaderPNG.cpp">
+      <Filter>Source Files\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\IO\ImageLoaderPVR.cpp">
+      <Filter>Source Files\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\IO\ImageLoaderTGA.cpp">
+      <Filter>Source Files\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\PVRTCEncoder\PVRTCImage.cpp">
+      <Filter>Source Files\PVRTCEncoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\PVRTCEncoder\Block.cpp">
+      <Filter>Source Files\PVRTCEncoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\PVRTCEncoder\CompressorPVRLib.cpp">
+      <Filter>Source Files\PVRTCEncoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\BPTCEncoder\BptcDecompressor.cpp">
+      <Filter>Source Files\BPTCEncoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ASTCEncoder\AstcDecompressor.cpp">
+      <Filter>Source Files\ASTCEncoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DXTEncoder\DxtCompressor.cpp">
+      <Filter>Source Files\DXTEncoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DXTEncoder\DxtDecompressor.cpp">
+      <Filter>Source Files\DXTEncoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ETCEncoder\EtcCompressor.cpp">
+      <Filter>Source Files\ETCEncoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ETCEncoder\EtcDecompressor.cpp">
+      <Filter>Source Files\ETCEncoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\PVRTCEncoder\PvrtcCompressor.cpp">
+      <Filter>Source Files\PVRTCEncoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\PVRTCEncoder\PvrtcDecompressor.cpp">
+      <Filter>Source Files\PVRTCEncoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\third_party\tga\targa.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\BPTCEncoder\RGBAEndpointsSIMD.cpp">
+      <Filter>Source Files\BPTCEncoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\BPTCEncoder\BptcCompressor.cpp">
+      <Filter>Source Files\BPTCEncoder</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

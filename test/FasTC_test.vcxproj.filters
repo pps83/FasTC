@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source Files\ASTCEncoder">
+      <UniqueIdentifier>{43a9019a-9b04-498d-a0cf-f90b862ab35f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Base">
+      <UniqueIdentifier>{455e33a4-80c0-4060-9316-92be20cd49a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PVRTCEncoder">
+      <UniqueIdentifier>{cb393529-d764-4718-9cb6-78ad5ac4bea9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ASTCEncoder\TestIntegerEncoding.cpp">
+      <Filter>Source Files\ASTCEncoder</Filter>
+    </ClCompile>
+    <ClCompile Include="ASTCEncoder\TestASTCDecompression.cpp">
+      <Filter>Source Files\ASTCEncoder</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\TestPixel.cpp">
+      <Filter>Source Files\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\TestVector.cpp">
+      <Filter>Source Files\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\TestBits.cpp">
+      <Filter>Source Files\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\TestColor.cpp">
+      <Filter>Source Files\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\TestImage.cpp">
+      <Filter>Source Files\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\TestMatrix.cpp">
+      <Filter>Source Files\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="PVRTCEncoder\BlockTest.cpp">
+      <Filter>Source Files\PVRTCEncoder</Filter>
+    </ClCompile>
+    <ClCompile Include="PVRTCEncoder\DecompressorTest.cpp">
+      <Filter>Source Files\PVRTCEncoder</Filter>
+    </ClCompile>
+    <ClCompile Include="PVRTCEncoder\DecompTestPVR.cpp">
+      <Filter>Source Files\PVRTCEncoder</Filter>
+    </ClCompile>
+    <ClCompile Include="PVRTCEncoder\ImageTest.cpp">
+      <Filter>Source Files\PVRTCEncoder</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

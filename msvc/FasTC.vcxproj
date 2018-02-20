@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\FasTC\ASTCCompressor.h" />
+    <ClInclude Include="..\include\FasTC\BaseConfig.h" />
+    <ClInclude Include="..\include\FasTC\Bits.h" />
+    <ClInclude Include="..\include\FasTC\BitStream.h" />
+    <ClInclude Include="..\include\FasTC\BPTCCompressor.h" />
+    <ClInclude Include="..\include\FasTC\BPTCConfig.h" />
+    <ClInclude Include="..\include\FasTC\Color.h" />
+    <ClInclude Include="..\include\FasTC\CompressedImage.h" />
+    <ClInclude Include="..\include\FasTC\CompressionFormat.h" />
+    <ClInclude Include="..\include\FasTC\CompressionJob.h" />
+    <ClInclude Include="..\include\FasTC\DXTCompressor.h" />
+    <ClInclude Include="..\include\FasTC\ETCCompressor.h" />
+    <ClInclude Include="..\include\FasTC\FileStream.h" />
+    <ClInclude Include="..\include\FasTC\Image.h" />
+    <ClInclude Include="..\include\FasTC\ImageFile.h" />
+    <ClInclude Include="..\include\FasTC\ImageFileFormat.h" />
+    <ClInclude Include="..\include\FasTC\ImageFwd.h" />
+    <ClInclude Include="..\include\FasTC\ImageLoader.h" />
+    <ClInclude Include="..\include\FasTC\ImageWriter.h" />
+    <ClInclude Include="..\include\FasTC\IPixel.h" />
+    <ClInclude Include="..\include\FasTC\Matrix2x2.h" />
+    <ClInclude Include="..\include\FasTC\Matrix3x3.h" />
+    <ClInclude Include="..\include\FasTC\Matrix4x4.h" />
+    <ClInclude Include="..\include\FasTC\MatrixBase.h" />
+    <ClInclude Include="..\include\FasTC\MatrixSquare.h" />
+    <ClInclude Include="..\include\FasTC\Pixel.h" />
+    <ClInclude Include="..\include\FasTC\PVRTCCompressor.h" />
+    <ClInclude Include="..\include\FasTC\PVRTCDefines.h" />
+    <ClInclude Include="..\include\FasTC\ReferenceCounter.h" />
+    <ClInclude Include="..\include\FasTC\ScopedAllocator.h" />
+    <ClInclude Include="..\include\FasTC\Shapes.h" />
+    <ClInclude Include="..\include\FasTC\StopWatch.h" />
+    <ClInclude Include="..\include\FasTC\TexComp.h" />
+    <ClInclude Include="..\include\FasTC\TexCompTypes.h" />
+    <ClInclude Include="..\include\FasTC\ThreadSafeStreambuf.h" />
+    <ClInclude Include="..\include\FasTC\Vector2.h" />
+    <ClInclude Include="..\include\FasTC\Vector3.h" />
+    <ClInclude Include="..\include\FasTC\Vector4.h" />
+    <ClInclude Include="..\include\FasTC\VectorBase.h" />
+    <ClInclude Include="..\src\ASTCEncoder\IntegerEncoding.h" />
+    <ClInclude Include="..\src\ASTCEncoder\Utils.h" />
+    <ClInclude Include="..\src\BPTCEncoder\AnchorTables.h" />
+    <ClInclude Include="..\src\BPTCEncoder\BCLookupTables.h" />
+    <ClInclude Include="..\src\BPTCEncoder\CompressionMode.h" />
+    <ClInclude Include="..\src\BPTCEncoder\CompressionModeSIMD.h" />
+    <ClInclude Include="..\src\BPTCEncoder\ParallelStage.h" />
+    <ClInclude Include="..\src\BPTCEncoder\RGBAEndpoints.h" />
+    <ClInclude Include="..\src\BPTCEncoder\RGBAEndpointsSIMD.h" />
+    <ClInclude Include="..\src\Core\CompressionFuncs.h" />
+    <ClInclude Include="..\src\Core\Thread.h" />
+    <ClInclude Include="..\src\Core\ThreadGroup.h" />
+    <ClInclude Include="..\src\Core\WorkerQueue.h" />
+    <ClInclude Include="..\src\DXTEncoder\stb_dxt.h" />
+    <ClInclude Include="..\src\ETCEncoder\rg_etc1.h" />
+    <ClInclude Include="..\src\IO\GLDefines.h" />
+    <ClInclude Include="..\src\IO\ImageLoaderASTC.h" />
+    <ClInclude Include="..\src\IO\ImageLoaderKTX.h" />
+    <ClInclude Include="..\src\IO\ImageLoaderPNG.h" />
+    <ClInclude Include="..\src\IO\ImageLoaderPVR.h" />
+    <ClInclude Include="..\src\IO\ImageLoaderTGA.h" />
+    <ClInclude Include="..\src\IO\ImageWriterKTX.h" />
+    <ClInclude Include="..\src\IO\ImageWriterPNG.h" />
+    <ClInclude Include="..\src\PVRTCEncoder\Block.h" />
+    <ClInclude Include="..\src\PVRTCEncoder\Indexer.h" />
+    <ClInclude Include="..\src\PVRTCEncoder\PVRTCImage.h" />
+    <ClInclude Include="..\third_party\tga\targa.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\ASTCEncoder\AstcDecompressor.cpp" />
+    <ClCompile Include="..\src\ASTCEncoder\IntegerEncoding.cpp" />
+    <ClCompile Include="..\src\Base\Color.cpp" />
+    <ClCompile Include="..\src\Base\CompressionJob.cpp" />
+    <ClCompile Include="..\src\Base\Image.cpp" />
+    <ClCompile Include="..\src\Base\IPixel.cpp" />
+    <ClCompile Include="..\src\Base\Pixel.cpp" />
+    <ClCompile Include="..\src\BPTCEncoder\BptcCompressor.cpp" />
+    <ClCompile Include="..\src\BPTCEncoder\CompressNVTT.cpp" />
+    <ClCompile Include="..\src\BPTCEncoder\BptcDecompressor.cpp" />
+    <ClCompile Include="..\src\BPTCEncoder\ParallelStage.cpp" />
+    <ClCompile Include="..\src\BPTCEncoder\RGBAEndpoints.cpp" />
+    <ClCompile Include="..\src\BPTCEncoder\RGBAEndpointsSIMD.cpp" />
+    <ClCompile Include="..\src\Core\CompressedImage.cpp" />
+    <ClCompile Include="..\src\Core\StopWatchWin32.cpp" />
+    <ClCompile Include="..\src\Core\TexComp.cpp" />
+    <ClCompile Include="..\src\Core\Thread.cpp" />
+    <ClCompile Include="..\src\Core\ThreadGroup.cpp" />
+    <ClCompile Include="..\src\Core\ThreadSafeStreambuf.cpp" />
+    <ClCompile Include="..\src\Core\ThreadWin32.cpp" />
+    <ClCompile Include="..\src\Core\WorkerQueue.cpp" />
+    <ClCompile Include="..\src\DXTEncoder\DxtCompressor.cpp" />
+    <ClCompile Include="..\src\DXTEncoder\DxtDecompressor.cpp" />
+    <ClCompile Include="..\src\ETCEncoder\EtcCompressor.cpp" />
+    <ClCompile Include="..\src\ETCEncoder\EtcDecompressor.cpp" />
+    <ClCompile Include="..\src\ETCEncoder\rg_etc1.cpp" />
+    <ClCompile Include="..\src\IO\FileStreamWin32.cpp" />
+    <ClCompile Include="..\src\IO\ImageFile.cpp" />
+    <ClCompile Include="..\src\IO\ImageLoader.cpp" />
+    <ClCompile Include="..\src\IO\ImageLoaderASTC.cpp" />
+    <ClCompile Include="..\src\IO\ImageLoaderKTX.cpp" />
+    <ClCompile Include="..\src\IO\ImageLoaderPNG.cpp" />
+    <ClCompile Include="..\src\IO\ImageLoaderPVR.cpp" />
+    <ClCompile Include="..\src\IO\ImageLoaderTGA.cpp" />
+    <ClCompile Include="..\src\IO\ImageWriter.cpp" />
+    <ClCompile Include="..\src\IO\ImageWriterKTX.cpp" />
+    <ClCompile Include="..\src\IO\ImageWriterPNG.cpp" />
+    <ClCompile Include="..\src\PVRTCEncoder\Block.cpp" />
+    <ClCompile Include="..\src\PVRTCEncoder\PvrtcCompressor.cpp" />
+    <ClCompile Include="..\src\PVRTCEncoder\CompressorPVRLib.cpp" />
+    <ClCompile Include="..\src\PVRTCEncoder\PvrtcDecompressor.cpp" />
+    <ClCompile Include="..\src\PVRTCEncoder\PVRTCImage.cpp" />
+    <ClCompile Include="..\third_party\tga\targa.c" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4BB72AE5-62FC-408F-AD4C-884AC23BCF69}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>FasTC</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)build.msvc\$(Platform)-$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build.msvc\.obj\$(Platform)-$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)build.msvc\$(Platform)-$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build.msvc\.obj\$(Platform)-$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)build.msvc\$(Platform)-$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build.msvc\.obj\$(Platform)-$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)build.msvc\$(Platform)-$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build.msvc\.obj\$(Platform)-$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>../include;../third_party/tga;../third_party/libpng;../../libpng</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>../include;../third_party/tga;../third_party/libpng;../../libpng</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../include;../third_party/tga;../third_party/libpng;../../libpng</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <ProjectReference />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>../include;../third_party/tga;../third_party/libpng;../../libpng</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <ProjectReference />
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,3 +1,6 @@
-[submodule "Windows"]
-	path = Windows
-	url = https://github.com/Mokosha/FasTC-MSVCLibs.git
+[submodule "third_party/zlib"]
+	path = third_party/zlib
+	url = ../zlib.git
+[submodule "third_party/libpng"]
+	path = third_party/libpng
+	url = ../libpng.git
