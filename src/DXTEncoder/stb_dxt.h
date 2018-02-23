@@ -563,9 +563,15 @@ static void stb__CompressAlphaBlock(unsigned char *dest,unsigned char *src, int 
    }
 
    // encode them
-   ((unsigned char *)dest)[0] = mx;
-   ((unsigned char *)dest)[1] = mn;
+   dest[0] = mx;
+   dest[1] = mn;
    dest += 2;
+   if (mx == mn)
+   {
+      static const unsigned char const_alpha_block[] = { 0x49, 0x92, 0x24, 0x49, 0x92, 0x24 };
+      memcpy(dest, const_alpha_block, sizeof(const_alpha_block));
+      return;
+   }
 
    // determine bias and emit color indices
    // given the choice of mx/mn, these indices are optimal:
