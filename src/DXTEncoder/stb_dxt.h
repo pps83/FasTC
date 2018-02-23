@@ -488,7 +488,7 @@ static void stb__CompressColorBlock(unsigned char *dest, unsigned char *block, i
 
    // check if block is constant
    for (i=1;i<16;i++)
-      if (((unsigned int *) block)[i] != ((unsigned int *) block)[0])
+      if ((((unsigned int *) block)[i] & 0xffffff) != (((unsigned int *) block)[0] & 0xffffff))
          break;
 
    if(i == 16) { // constant color
