@@ -23,7 +23,9 @@
 
 // ImageLoader.h/ImageWriter.h
 #define PNG_FOUND
+#ifdef _WIN32
 #define OPENGL_FOUND
+#endif
 
 // BPTCConfig.h
 // Do we have the proper popcnt instruction defined?
@@ -32,8 +34,11 @@
 //#define HAS_SSE_41
 
 #define HAS_ATOMICS
-//#define HAS_GCC_ATOMICS
+#ifdef _MSC_VER
 #define HAS_MSVC_ATOMICS
+#else
+#define HAS_GCC_ATOMICS
+#endif
 // #define FOUND_NVTT_BPTC_EXPORT
 
 // PVRTCDefines.h

@@ -42,6 +42,7 @@
 #define GL_FLOAT                          0x1406
 #define GL_DOUBLE                         0x140A
 
+#define GL_RGB                            0x1907
 #define GL_RGBA                           0x1908
 #define GL_RGBA8                          0x8058
 

@@ -140,7 +140,7 @@ uint32 CompressedImage::GetCompressedSize(uint32 width, uint32 height, ECompress
 
   const uint32 blocksWide = (width + blockDim[0] - 1) / blockDim[0];
   const uint32 blocksHigh = (height + blockDim[1] - 1) / blockDim[1];
-  const uint32 uncompBlockSize = blockDim[0] * blockDim[1] * sizeof(uint32);
+  // const uint32 uncompBlockSize = blockDim[0] * blockDim[1] * sizeof(uint32);
 
   const uint32 nBlocks = blocksWide * blocksHigh;
   const uint32 blockSz = GetBlockSize(format);

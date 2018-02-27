@@ -187,7 +187,7 @@ bool ImageLoaderASTC::ReadData() {
   m_Width = pixelWidth;
   m_Height = pixelHeight;
 
-  uint32 uncompressedSize = pixelWidth * pixelHeight * 4;
+  // uint32 uncompressedSize = pixelWidth * pixelHeight * 4;
   uint32 compressedSize = CompressedImage::GetCompressedSize(pixelWidth, pixelHeight, fmt);
 
   assert(compressedSize + 16 == m_NumRawDataBytes);

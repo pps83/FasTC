@@ -48,7 +48,6 @@
 //#undef kMaxNumDataPoints
 
 #include "src/Core/CompressedImage.cpp"
-#include "src/Core/StopWatchWin32.cpp"
 
 #define sad sad_2
 #define clamp clamp_1
@@ -59,7 +58,6 @@
 #include "src/Core/Thread.cpp"
 #include "src/Core/ThreadGroup.cpp"
 #include "src/Core/ThreadSafeStreambuf.cpp"
-#include "src/Core/ThreadWin32.cpp"
 
 #define clamp clamp_2
 #include "src/Core/WorkerQueue.cpp"
@@ -70,7 +68,6 @@
 #include "src/ETCEncoder/EtcCompressor.cpp"
 #include "src/ETCEncoder/EtcDecompressor.cpp"
 #include "src/ETCEncoder/rg_etc1.cpp"
-#include "src/IO/FileStreamWin32.cpp"
 #undef strncpy
 
 #define ReportError ReportError_1
@@ -110,5 +107,19 @@
 #define Clamp Clamp_3
 #include "src/PVRTCEncoder/PVRTCImage.cpp"
 #undef Clamp
+
+#ifdef _WIN32
+#include "src/Core/StopWatchWin32.cpp"
+#include "src/Core/ThreadWin32.cpp"
+#include "src/IO/FileStreamWin32.cpp"
+#else
+#include "src/Core/ThreadPThread.cpp"
+#include "src/IO/FileStreamUnix.cpp"
+#if defined(__APPLE__)
+#include "src/Core/StopWatchOSX.cpp"
+#elif defined(__ANDROID__)
+#include "src/Core/StopWatchUnix.cpp"
+#endif
+#endif
 
 #include "third_party/tga/targa.c"

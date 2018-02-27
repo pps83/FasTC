@@ -84,7 +84,7 @@ static char *localStrndup(char *string, int length);
 static int handleTargaError(FILE *fh, int errorCode, const char *function,
 		size_t line)
 {
-	char *errorMessage = NULL;
+	const char *errorMessage = NULL;
 
 	if((errorMessage = strerror(errno)) == NULL) {
 		errorMessage = "uknown error";
