@@ -61,18 +61,18 @@ namespace FasTC {
     }
 
     // Allows casting to other vector types if the underlying type system does as well...
-    template<typename _T>
-    operator MatrixBase<_T, nRows, nCols>() const { 
-      MatrixBase<_T, nRows, nCols> ret;
+    template<typename T_>
+    operator MatrixBase<T_, nRows, nCols>() const { 
+      MatrixBase<T_, nRows, nCols> ret;
       for(int i = 0; i < Size; i++) {
-        ret[i] = static_cast<_T>(mat[i]);
+        ret[i] = static_cast<T_>(mat[i]);
       }
       return ret;
     }
 
     // Equality operator 
-    template<typename _T>
-    bool operator==(MatrixBase<_T, nRows, nCols> &other) const { 
+    template<typename T_>
+    bool operator==(MatrixBase<T_, nRows, nCols> &other) const { 
       bool result = true;
       for(int i = 0; i < Size; i++) {
         result = result && (mat[i] == other[i]);
@@ -92,8 +92,8 @@ namespace FasTC {
     }
 
     // Double dot product
-    template<typename _T>
-    T DDot(const MatrixBase<_T, nRows, nCols> &m) const {
+    template<typename T_>
+    T DDot(const MatrixBase<T_, nRows, nCols> &m) const {
       T result = 0;
       for(int i = 0; i < Size; i++) {
         result += (*this)[i] * m[i];
@@ -103,10 +103,10 @@ namespace FasTC {
   };
 
   // Matrix multiplication
-  template<typename T, typename _T, const int nRows, const int nCols, const int nTarget>
+  template<typename T, typename T_, const int nRows, const int nCols, const int nTarget>
   inline MatrixBase<T, nRows, nTarget>
     MultiplyMatrix(const MatrixBase<T, nRows, nCols> &a,
-                   const MatrixBase<_T, nCols, nTarget> &b) {
+                   const MatrixBase<T_, nCols, nTarget> &b) {
     MatrixBase<T, nRows, nTarget> result;
     for(int r = 0; r < nRows; r++)
     for(int c = 0; c < nTarget; c++) {
@@ -119,9 +119,9 @@ namespace FasTC {
   }
 
   // Vector multiplication -- treat vectors as Nx1 matrices...
-  template<typename T, typename _T, int nRows, int nCols>
+  template<typename T, typename T_, int nRows, int nCols>
   inline VectorBase<T, nCols> VectorMatrixMultiply(const VectorBase<T, nRows> &v,
-                                                   const MatrixBase<_T, nRows, nCols> &m) {
+                                                   const MatrixBase<T_, nRows, nCols> &m) {
     VectorBase<T, nCols> r;
     for(int j = 0; j < nCols; j++) {
       r(j) = 0;
@@ -132,8 +132,8 @@ namespace FasTC {
     return r;
   }
 
-  template<typename T, typename _T, int nRows, int nCols>
-  inline VectorBase<T, nRows> MatrixVectorMultiply(const MatrixBase<_T, nRows, nCols> &m,
+  template<typename T, typename T_, int nRows, int nCols>
+  inline VectorBase<T, nRows> MatrixVectorMultiply(const MatrixBase<T_, nRows, nCols> &m,
                                                    const VectorBase<T, nCols> &v) {
     VectorBase<T, nRows> r;
     for(int j = 0; j < nRows; j++) {
@@ -276,12 +276,12 @@ namespace FasTC {
   };
 
   // Outer product...
-  template<typename _T, typename _U, const int N, const int M>
-  MatrixBase<_T, N, M> operator^(
-    const VectorBase<_T, N> &a, 
-    const VectorBase<_U, M> &b
+  template<typename T_, typename U_, const int N, const int M>
+  MatrixBase<T_, N, M> operator^(
+    const VectorBase<T_, N> &a, 
+    const VectorBase<U_, M> &b
   ) {
-    MatrixBase<_T, N, M> result;
+    MatrixBase<T_, N, M> result;
 
     for(int i = 0; i < N; i++)
       for(int j = 0; j < M; j++)
@@ -290,10 +290,10 @@ namespace FasTC {
     return result;
   }
 
-  template<typename _T, typename _U, const int N, const int M>
-  MatrixBase<_T, N, M> OuterProduct(
-    const VectorBase<_T, N> &a, 
-    const VectorBase<_U, M> &b
+  template<typename T_, typename U_, const int N, const int M>
+  MatrixBase<T_, N, M> OuterProduct(
+    const VectorBase<T_, N> &a, 
+    const VectorBase<U_, M> &b
   ) { 
     return a ^ b; 
   }
