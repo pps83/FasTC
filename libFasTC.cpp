@@ -16,6 +16,22 @@
 #undef AddJob
 #endif
 
+#ifdef __ANDROID__
+#define _USE_MATH_DEFINES
+#include <math.h>
+#include <android/api-level.h>
+#include <sched.h>
+#if __ANDROID_API__ < 18
+static inline double log2(double n)
+{
+    return log(n) * M_LOG2E;
+}
+#endif
+static int pthread_yield()
+{
+    return sched_yield();
+}
+#endif
 
 #include "src/ASTCEncoder/AstcDecompressor.cpp"
 #include "src/ASTCEncoder/IntegerEncoding.cpp"
