@@ -1,6 +1,8 @@
 [submodule "third_party/zlib"]
 	path = third_party/zlib
 	url = ../zlib.git
+	branch = master
 [submodule "third_party/libpng"]
 	path = third_party/libpng
 	url = ../libpng.git
+	branch = libpng16
