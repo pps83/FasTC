@@ -1811,7 +1811,7 @@ namespace rg_etc1
          {
             if (block_inten[0] > m_pSorted_luma[n - 1])
             {
-               const uint min_error = block_inten[0] - m_pSorted_luma[n - 1];
+               const uint min_error = labs(block_inten[0] - m_pSorted_luma[n - 1]);
                if (min_error >= trial_solution.m_error)
                   continue;
             }
@@ -1825,7 +1825,7 @@ namespace rg_etc1
          {
             if (m_pSorted_luma[0] > block_inten[3])
             {
-               const uint min_error = m_pSorted_luma[0] - block_inten[3];
+               const uint min_error = labs(m_pSorted_luma[0] - block_inten[3]);
                if (min_error >= trial_solution.m_error)
                   continue;
             }
@@ -2012,8 +2012,8 @@ found_perfect_match:
       block.m_bytes[3] = static_cast<uint8>(((inten | (inten << 3)) << 2) | (diff << 1));
                         
       const uint etc1_selector = g_selector_index_to_etc1[(best_x >> 4) & 3];
-      memset(&block.m_bytes[4], (etc1_selector & 2) ? 0xFF : 0, 2);
-      memset(&block.m_bytes[6], (etc1_selector & 1) ? 0xFF : 0, 2);
+      *reinterpret_cast<uint16*>(&block.m_bytes[4]) = (etc1_selector & 2) ? 0xFFFF : 0;
+      *reinterpret_cast<uint16*>(&block.m_bytes[6]) = (etc1_selector & 1) ? 0xFFFF : 0;
 
       const uint best_packed_c0 = (best_x >> 8) & 255;
       if (diff)
